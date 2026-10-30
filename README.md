@@ -6,8 +6,9 @@ Projeto de estudo em Python criado para revisar os temas de uma lição introdut
 
 1. Leia o [guia de estudos](docs/guia-de-estudos.md).
 2. Confira os termos no [glossário](docs/glossario.md).
-3. Execute o quiz no seu computador.
-4. Se realizar uma atividade autorizada, registre-a usando o [modelo de relatório](docs/modelo-de-relatorio.md).
+3. Leia os [casos para discussão](docs/casos-para-discussao.md).
+4. Execute o quiz no seu computador.
+5. Se realizar uma atividade autorizada, registre-a usando o [modelo de relatório](docs/modelo-de-relatorio.md).
 
 ## Executar o quiz
 
@@ -26,15 +27,16 @@ python3 -m unittest discover -s tests -v
 ## O que faz parte do projeto
 
 - `quiz.py` — quiz interativo com perguntas conceituais.
-- `docs/guia-de-estudos.md` — revisão dos conceitos e preparação de laboratório.
+- `docs/guia-de-estudos.md` — revisão, ferramentas em alto nível, wordlists, SMS e segurança de laboratório.
 - `docs/glossario.md` — termos importantes da lição.
+- `docs/casos-para-discussao.md` — cenários fictícios para análise defensiva.
 - `docs/modelo-de-relatorio.md` — estrutura para documentar uma prática autorizada.
 - `tests/` — testes automáticos da estrutura das perguntas.
 - `.github/workflows/test.yml` — execução automática dos testes quando há alterações no GitHub.
 
 ## Temas estudados
 
-Princípios de segurança, autorização e escopo; força bruta, password spraying e credential stuffing; boas práticas de senhas, hashing e MFA; contexto responsável de ferramentas como Nmap, Hydra, John the Ripper, WPScan e Patator; e cuidados ao usar Kali Linux e Metasploitable 2 em um laboratório isolado.
+Princípios de segurança, autorização e escopo; força bruta, password spraying e credential stuffing; wordlists e proteção de dados; boas práticas de senhas, hashing e MFA; contexto responsável de ferramentas como Nmap, Hydra, John the Ripper, WPScan e Patator; e cuidados ao usar Kali Linux e Metasploitable 2 em um laboratório isolado.
 
 ## Regras de segurança
 

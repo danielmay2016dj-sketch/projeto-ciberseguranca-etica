@@ -90,6 +90,62 @@ QUESTIONS = [
         "answer": "B",
         "explanation": "Uma resposta estruturada preserva evidências e ajuda a conter e corrigir o incidente.",
     },
+
+    {
+        "question": "Qual é a finalidade geral de uma distribuição como Kali Linux em um curso de segurança?",
+        "options": [
+            "A) Oferecer ferramentas para auditoria e estudo em ambientes autorizados",
+            "B) Garantir acesso a qualquer sistema conectado à internet",
+            "C) Substituir a autorização do responsável pelo sistema",
+            "D) Tornar inofensiva qualquer ferramenta executada",
+        ],
+        "answer": "A",
+        "explanation": "A distribuição reúne ferramentas; o uso continua sujeito a autorização, escopo e medidas de segurança.",
+    },
+    {
+        "question": "Por que uma wordlist usada em um exercício deve ser fictícia e restrita ao laboratório?",
+        "options": [
+            "A) Para evitar expor dados pessoais e limitar o exercício ao escopo autorizado",
+            "B) Para facilitar o uso de senhas reais de colegas",
+            "C) Porque listas de palavras substituem a autorização",
+            "D) Para compartilhar credenciais publicamente",
+        ],
+        "answer": "A",
+        "explanation": "Dados fictícios e escopo controlado reduzem riscos de privacidade e uso indevido.",
+    },
+    {
+        "question": "Qual medida ajuda a reduzir o risco de abuso de formulários de login?",
+        "options": [
+            "A) Monitorar padrões, limitar tentativas com cuidado e oferecer MFA",
+            "B) Armazenar senhas em texto simples para facilitar a auditoria",
+            "C) Desativar registros de autenticação",
+            "D) Usar a mesma senha para todos os usuários",
+        ],
+        "answer": "A",
+        "explanation": "Controles de autenticação, monitoramento e MFA ajudam a detectar e reduzir tentativas abusivas.",
+    },
+    {
+        "question": "Qual é um risco de depender apenas de códigos enviados por SMS para MFA?",
+        "options": [
+            "A) SMS pode estar sujeito a fraude, interceptação ou redirecionamento do número",
+            "B) SMS impede toda forma de phishing",
+            "C) SMS elimina a necessidade de proteger a conta telefônica",
+            "D) SMS torna segura a reutilização de senhas",
+        ],
+        "answer": "A",
+        "explanation": "MFA é útil, mas os métodos variam em resistência. Proteja também a conta telefônica e prefira métodos mais resistentes a phishing quando disponíveis.",
+    },
+    {
+        "question": "Qual descrição de Metasploitable 2 é adequada em uma aula?",
+        "options": [
+            "A) Uma máquina vulnerável intencionalmente criada para treinamento controlado",
+            "B) Um serviço público que pode ser testado sem autorização",
+            "C) Um substituto para backups e snapshots",
+            "D) Um sistema que deve ser exposto para receber tráfego externo",
+        ],
+        "answer": "A",
+        "explanation": "Ela deve ser usada em ambiente isolado, com autorização e sem exposição à internet.",
+    },
 ]
 
 

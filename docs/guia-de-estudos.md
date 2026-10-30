@@ -58,3 +58,35 @@ Ferramentas como Nmap, Hydra, John the Ripper, WPScan e Patator aparecem em curs
 ## 8. Reflexão individual
 
 Escreva com suas próprias palavras qual conceito foi mais importante para você, o que ainda precisa revisar e como aplicaria as práticas defensivas em um ambiente autorizado. Não apresente como experiência pessoal algo que você não realizou.
+
+## 9. Kali Linux e ferramentas: visão geral
+
+Kali Linux é uma distribuição voltada a testes de segurança e treinamento. Ela não concede permissão para testar sistemas de terceiros. O ambiente de trabalho precisa estar definido antes de abrir qualquer ferramenta.
+
+| Ferramenta | Uso geral em segurança | Lembrete defensivo |
+|---|---|---|
+| Nmap | Inventário e avaliação de serviços de rede | Use somente no escopo autorizado; confirme horário e limites com o responsável. |
+| Hydra | Avaliação de controles de autenticação em laboratório | Não teste formulários ou contas reais sem autorização específica. |
+| John the Ripper | Auditoria de qualidade de senhas em material autorizado | Trabalhe com hashes de demonstração, nunca com dados obtidos sem permissão. |
+| WPScan | Avaliação de segurança de instalações WordPress autorizadas | Preserve o ambiente e siga o escopo e a política do responsável pelo site. |
+| Patator | Estrutura de testes de autenticação em contexto controlado | Pode gerar tentativas numerosas; não use contra serviços públicos ou contas reais. |
+
+A tabela serve para reconhecer o papel geral das ferramentas. Não é um roteiro de execução. A autorização, o escopo e a contenção continuam indispensáveis.
+
+## 10. Wordlists e cuidado com dados
+
+Uma wordlist é uma coleção de palavras que pode aparecer em contextos de auditoria e treinamento. Listas obtidas de vazamentos podem conter dados pessoais e credenciais reais. Em exercícios acadêmicos, prefira conjuntos sintéticos fornecidos pelo instrutor e nunca publique listas com senhas, nomes ou outros dados pessoais. Não compartilhe arquivos de credenciais em repositórios Git.
+
+Antes de enviar qualquer arquivo ao GitHub, confira se ele não contém senhas, tokens, chaves privadas, endereços ou dados de pessoas. Se um segredo for publicado por engano, removê-lo do arquivo não basta: revogue ou troque a credencial imediatamente e avise o responsável.
+
+## 11. Riscos de autenticação por SMS
+
+Códigos por SMS podem ser mais vulneráveis a fraude envolvendo a linha telefônica, interceptação ou engenharia social do que métodos mais resistentes a phishing. Sempre que possível, utilize uma chave de segurança ou aplicativo autenticador aprovado pela organização. Proteja a conta da operadora com PIN e mecanismos de recuperação seguros. Nenhum método dispensa senhas únicas, atenção a mensagens suspeitas e canais oficiais de recuperação.
+
+## 12. Análise de tentativas de acesso — abordagem defensiva
+
+Ao revisar alertas de login, um analista autorizado pode observar horários, volume, origem aproximada, quantidade de contas afetadas e resultados de autenticação. A análise deve respeitar a privacidade, limitar o acesso aos registros e seguir o plano de resposta a incidentes. Medidas possíveis incluem alertar o responsável, revogar sessões suspeitas, exigir redefinição de credenciais quando justificado e reforçar MFA. Preserve evidências e documente cada ação.
+
+## 13. Escopo para um exercício escolar
+
+Um escopo escrito deve indicar: máquinas virtuais específicas, rede isolada utilizada, janela de tempo, atividades permitidas, atividades proibidas, pessoa responsável, contato de emergência, critérios para interromper a prática e procedimento de restauração. Se algum item não estiver claro, interrompa a atividade e peça orientação ao instrutor.
