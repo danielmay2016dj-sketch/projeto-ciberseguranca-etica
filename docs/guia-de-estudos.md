@@ -90,3 +90,9 @@ Ao revisar alertas de login, um analista autorizado pode observar horários, vol
 ## 13. Escopo para um exercício escolar
 
 Um escopo escrito deve indicar: máquinas virtuais específicas, rede isolada utilizada, janela de tempo, atividades permitidas, atividades proibidas, pessoa responsável, contato de emergência, critérios para interromper a prática e procedimento de restauração. Se algum item não estiver claro, interrompa a atividade e peça orientação ao instrutor.
+
+## 14. Demonstração segura de controles de autenticação
+
+O arquivo `simulacao_controle.py` representa eventos de falha usando apenas números fictícios. A função não pede usuário ou senha e não envia tráfego. O limite é um exemplo didático, não uma recomendação universal de configuração: sistemas reais precisam equilibrar segurança, disponibilidade e risco de bloqueio indevido.
+
+Na discussão, compare controles possíveis: MFA, alertas, limites graduais, detecção de padrões, recuperação de conta e suporte ao usuário. Considere também que mensagens de erro excessivamente detalhadas podem revelar informações sobre contas. Não use a simulação como base para automatizar tentativas contra um serviço real.

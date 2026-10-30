@@ -1,0 +1,12 @@
+{
+  "nome": "simulacao-educacional-offline",
+  "tipo": "simulacao local sem rede",
+  "alvo": "nenhum; dados ficticios em memoria",
+  "acesso_a_rede": false,
+  "credenciais_reais": false,
+  "wordlist": null,
+  "ferramenta_de_teste_de_login": null,
+  "objetivo": "demonstrar conceitualmente como um limite de tentativas pode bloquear novas falhas",
+  "limite_da_simulacao": 3,
+  "observacao": "Nao usar para testar servicos, formularios, contas ou sistemas reais."
+}
