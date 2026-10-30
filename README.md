@@ -1,41 +1,49 @@
-# Cibersegurança Ética: quiz de fundamentos e defesa
+# Cibersegurança Ética: fundamentos e defesa
 
-Este projeto é um quiz simples, feito em Python, para revisar alguns assuntos estudados na lição de cibersegurança. A ideia é praticar os conceitos e lembrar que ferramentas de segurança devem ser usadas com responsabilidade.
+Projeto de estudo em Python criado para revisar os temas de uma lição introdutória de cibersegurança. O programa principal é um quiz offline; a documentação complementar reúne conceitos, cuidados para laboratório e um modelo de relatório.
 
-## O que o quiz aborda
+## Comece por aqui
 
-As perguntas passam por autorização e escopo, tipos de tentativa de acesso a contas, proteção de senhas, autenticação multifator e uso de ferramentas de segurança em ambientes controlados. Também há uma pergunta sobre como manter uma máquina vulnerável de laboratório isolada.
+1. Leia o [guia de estudos](docs/guia-de-estudos.md).
+2. Confira os termos no [glossário](docs/glossario.md).
+3. Execute o quiz no seu computador.
+4. Se realizar uma atividade autorizada, registre-a usando o [modelo de relatório](docs/modelo-de-relatorio.md).
 
-O quiz funciona localmente e não se conecta à internet. Ele não testa sites, não tenta entrar em contas e não executa ferramentas de ataque.
+## Executar o quiz
 
-## Como executar
-
-Você precisa ter Python 3 instalado. Não é necessário instalar bibliotecas extras.
+Requisito: Python 3. Não há bibliotecas externas para instalar.
 
 ```bash
 python3 quiz.py
 ```
 
-Responda às perguntas digitando A, B, C ou D. No final, o programa mostra a pontuação e uma explicação para cada resposta.
+Responda com A, B, C ou D. O quiz informa a pontuação e explica cada resposta. Para rodar os testes do projeto:
 
-## O que aprendi / reflexão pessoal
+```bash
+python3 -m unittest discover -s tests -v
+```
 
-Este espaço pode ser preenchido com suas próprias palavras antes da entrega. Por exemplo: qual assunto da lição foi mais interessante? O que você entendeu sobre autorização e segurança de senhas? O que ainda gostaria de estudar?
+## O que faz parte do projeto
 
-> Escreva aqui sua reflexão pessoal. Revise para que ela represente de verdade o que você aprendeu.
+- `quiz.py` — quiz interativo com perguntas conceituais.
+- `docs/guia-de-estudos.md` — revisão dos conceitos e preparação de laboratório.
+- `docs/glossario.md` — termos importantes da lição.
+- `docs/modelo-de-relatorio.md` — estrutura para documentar uma prática autorizada.
+- `tests/` — testes automáticos da estrutura das perguntas.
+- `.github/workflows/test.yml` — execução automática dos testes quando há alterações no GitHub.
 
-## Cuidados para praticar
+## Temas estudados
 
-- Faça testes somente em sistemas seus ou com autorização explícita.
-- Use máquinas virtuais isoladas, dados fictícios e pontos de restauração (snapshots).
-- Não coloque máquinas vulneráveis na internet nem use contas ou senhas pessoais.
-- Siga o escopo combinado e as regras da instituição ou do responsável pelo laboratório.
+Princípios de segurança, autorização e escopo; força bruta, password spraying e credential stuffing; boas práticas de senhas, hashing e MFA; contexto responsável de ferramentas como Nmap, Hydra, John the Ripper, WPScan e Patator; e cuidados ao usar Kali Linux e Metasploitable 2 em um laboratório isolado.
 
-## Arquivos
+## Regras de segurança
 
-- `quiz.py` — programa do quiz.
-- `LICENSE` — licença MIT.
+Este repositório não executa varreduras, tentativas de login, exploração de falhas nem envio de mensagens. Ferramentas citadas são apresentadas somente como contexto. Qualquer prática deve ocorrer em sistemas próprios ou com autorização explícita, dentro de um escopo definido, sem dados ou contas reais. Máquinas vulneráveis devem permanecer isoladas e ser restauradas ao final.
 
-## Aviso
+## Reflexão pessoal
 
-Este é um material de estudo com foco em prevenção e defesa. Ele não deve ser usado para acessar sistemas, contas ou redes sem autorização.
+Se este projeto for usado em uma entrega escolar, escreva sua reflexão com suas próprias palavras: o que aprendeu, qual tópico achou mais importante e o que ainda quer estudar. Não apresente como experiência pessoal algo que não realizou.
+
+## Licença
+
+O código é distribuído sob a licença MIT. Veja o arquivo `LICENSE`.
