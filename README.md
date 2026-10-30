@@ -1,42 +1,41 @@
-# Cibersegurança Ética: Fundamentos e Defesa
+# Cibersegurança Ética: quiz de fundamentos e defesa
 
-Projeto educacional em português inspirado nos tópicos da lição: fundamentos de segurança, tipos de ataque, proteção de credenciais, ferramentas de Kali Linux e laboratório controlado com Metasploitable 2.
+Este projeto é um quiz simples, feito em Python, para revisar alguns assuntos estudados na lição de cibersegurança. A ideia é praticar os conceitos e lembrar que ferramentas de segurança devem ser usadas com responsabilidade.
 
-## Objetivo
+## O que o quiz aborda
 
-Revisar os conceitos de forma segura por meio de um quiz offline. O projeto **não executa varreduras, tentativas de login, exploração de vulnerabilidades nem envia mensagens**. Todas as perguntas são conceituais e voltadas à defesa.
+As perguntas passam por autorização e escopo, tipos de tentativa de acesso a contas, proteção de senhas, autenticação multifator e uso de ferramentas de segurança em ambientes controlados. Também há uma pergunta sobre como manter uma máquina vulnerável de laboratório isolada.
 
-## Executar
+O quiz funciona localmente e não se conecta à internet. Ele não testa sites, não tenta entrar em contas e não executa ferramentas de ataque.
 
-Requisitos: Python 3.9 ou superior. Não há dependências externas.
+## Como executar
+
+Você precisa ter Python 3 instalado. Não é necessário instalar bibliotecas extras.
 
 ```bash
 python3 quiz.py
 ```
 
-## Conteúdo abordado
+Responda às perguntas digitando A, B, C ou D. No final, o programa mostra a pontuação e uma explicação para cada resposta.
 
-- Princípios de segurança e autorização
-- Tipos de ataques e redução de riscos
-- Password spraying, credential stuffing e força bruta: diferenças e defesas
-- Hashes, senhas e armazenamento responsável de credenciais
-- Noções de Nmap, Hydra, John the Ripper, WPScan e Patator no contexto de laboratório autorizado
-- Ambiente isolado com Kali Linux e Metasploitable 2
-- Wordlists, MFA e riscos de phishing/SMS
+## O que aprendi / reflexão pessoal
 
-## Regras do laboratório
+Este espaço pode ser preenchido com suas próprias palavras antes da entrega. Por exemplo: qual assunto da lição foi mais interessante? O que você entendeu sobre autorização e segurança de senhas? O que ainda gostaria de estudar?
 
-1. Pratique somente em sistemas próprios ou com autorização explícita e por escrito.
-2. Use máquinas virtuais isoladas, snapshots e dados fictícios.
-3. Não exponha a máquina vulnerável à internet nem use contas ou credenciais reais.
-4. Registre escopo, objetivo, evidências e medidas de correção.
-5. Ao terminar, desligue o laboratório e reverta o snapshot.
+> Escreva aqui sua reflexão pessoal. Revise para que ela represente de verdade o que você aprendeu.
 
-## Estrutura
+## Cuidados para praticar
 
-- `quiz.py` — quiz interativo executado localmente.
+- Faça testes somente em sistemas seus ou com autorização explícita.
+- Use máquinas virtuais isoladas, dados fictícios e pontos de restauração (snapshots).
+- Não coloque máquinas vulneráveis na internet nem use contas ou senhas pessoais.
+- Siga o escopo combinado e as regras da instituição ou do responsável pelo laboratório.
+
+## Arquivos
+
+- `quiz.py` — programa do quiz.
 - `LICENSE` — licença MIT.
 
 ## Aviso
 
-Este material tem finalidade educacional e defensiva. O autor não incentiva acesso não autorizado, coleta de credenciais ou interrupção de serviços. Siga as leis e políticas aplicáveis.
+Este é um material de estudo com foco em prevenção e defesa. Ele não deve ser usado para acessar sistemas, contas ou redes sem autorização.

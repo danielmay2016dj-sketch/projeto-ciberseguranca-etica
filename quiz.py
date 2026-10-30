@@ -94,8 +94,8 @@ QUESTIONS = [
 
 
 def main():
-    print("\nCIBERSEGURANÇA ÉTICA — QUIZ DE FUNDAMENTOS E DEFESA")
-    print("Responda A, B, C ou D. Este quiz é apenas conceitual e offline.\n")
+    print("\nQuiz de cibersegurança ética: fundamentos e defesa")
+    print("Vamos revisar os conceitos. Responda A, B, C ou D. O quiz é offline e conceitual.\n")
     score = 0
     for number, item in enumerate(QUESTIONS, start=1):
         print(f"{number}. {item['question']}")
@@ -108,17 +108,17 @@ def main():
             print("Digite apenas A, B, C ou D.")
         if response == item["answer"]:
             score += 1
-            print("Correto! " + item["explanation"] + "\n")
+            print("Isso mesmo! " + item["explanation"] + "\n")
         else:
-            print(f"Não foi dessa vez. Resposta: {item['answer']}. {item['explanation']}\n")
+            print(f"Quase! A resposta correta é: {item['answer']}. {item['explanation']}\n")
     percent = round(score / len(QUESTIONS) * 100)
     print(f"Resultado: {score}/{len(QUESTIONS)} ({percent}%).")
     if percent >= 80:
-        print("Ótimo trabalho — continue praticando com autorização e foco defensivo.")
+        print("Muito bem! Continue estudando com responsabilidade e foco na defesa.")
     elif percent >= 50:
-        print("Bom começo — revise os conceitos e tente novamente.")
+        print("Bom começo! Revise os conceitos e tente mais uma vez.")
     else:
-        print("Vale revisar o README e repetir o quiz.")
+        print("Sem problema: leia o README, revise o conteúdo e tente novamente.")
 
 
 if __name__ == "__main__":
