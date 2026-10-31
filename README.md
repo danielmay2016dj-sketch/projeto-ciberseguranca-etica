@@ -86,7 +86,13 @@ Não há wordlist de senhas no repositório. Ela não é necessária para a simu
 
 ## Evidências e capturas de tela
 
-A pasta `images/` contém instruções para adicionar capturas reais caso a prática seja realizada posteriormente em ambiente autorizado. Não use imagens fabricadas como evidência. Antes de enviar uma captura, remova senhas, tokens, dados pessoais e informações de rede que não devam ser públicas.
+A pasta `images/` contém registros visuais gerados a partir da saída real dos dois programas locais:
+
+- [Quiz executado](images/quiz-executado.png)
+- [Simulação defensiva offline](images/simulacao-offline.png)
+- [Nota sobre as capturas](images/REGISTRO.md)
+
+Essas imagens mostram apenas o quiz e a simulação offline; não são capturas de Nmap ou Medusa. Se a prática for realizada posteriormente em ambiente autorizado, novas capturas reais podem ser adicionadas. Antes de enviar imagens, remova senhas, tokens, dados pessoais e informações de rede que não devam ser públicas.
 
 ## Recursos de estudo
 
