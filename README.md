@@ -1,99 +1,117 @@
-# Cibersegurança: simulação defensiva de tentativas de login
+# Laboratório de Teste de Intrusão: estudo de brute force com Medusa e Kali Linux
 
-Projeto educacional para acompanhar uma lição introdutória sobre força bruta, Medusa e Kali Linux. O objetivo é explicar o risco de tentativas repetidas de autenticação e mostrar, de forma segura, como um controle defensivo de limite/bloqueio pode responder.
+Este repositório reúne material de estudo sobre reconhecimento de rede, segurança de autenticação e defesa contra tentativas repetidas de login. Foi preparado como apoio a uma atividade prática de Segurança da Informação.
 
-> **Importante:** esta entrega não executa brute force e não usa Medusa contra nenhum serviço. A demonstração é uma simulação local em memória: não testa senhas, não abre conexões e não acessa contas, sites ou redes.
+> **Situação desta entrega:** não foi possível executar a parte prática porque não há uma máquina virtual disponível. Portanto, não há resultados reais de Nmap ou Medusa nem capturas de execução. O repositório inclui uma simulação defensiva offline e documentação para organizar o estudo. Não declare como realizado o que não foi executado.
 
 ## Objetivos
 
-- Diferenciar força bruta, password spraying e credential stuffing em nível conceitual.
-- Reconhecer que ferramentas como Medusa só podem ser usadas em um laboratório autorizado e com escopo explícito.
-- Demonstrar uma resposta defensiva simples a falhas repetidas de autenticação.
-- Revisar o valor de MFA, monitoramento, senhas únicas e recuperação segura de contas.
-- Praticar documentação e organização de um repositório GitHub.
+- Entender, em nível conceitual, o reconhecimento autorizado de serviços.
+- Diferenciar força bruta, password spraying e credential stuffing.
+- Conhecer o papel de Kali Linux, Nmap, Medusa e DVWA em cursos de segurança.
+- Demonstrar um controle defensivo de tentativas por meio de uma simulação local, sem senhas ou conexões de rede.
+- Identificar medidas para reduzir o risco de abuso de autenticação.
 
-## Como executar
+## Ferramentas e ambiente de referência
 
-Requisito: Python 3. Não há dependências externas.
+- **[Kali Linux](https://www.kali.org/):** distribuição usada em cursos e auditorias de segurança. O uso depende de autorização e escopo.
+- **[Nmap](https://nmap.org/):** ferramenta de descoberta e auditoria de redes. Não foi executada nesta entrega.
+- **[Medusa](https://github.com/jmk-foofus/medusa):** ferramenta de auditoria de autenticação para ambientes controlados. Não foi executada nesta entrega.
+- **[DVWA](https://github.com/digininja/DVWA):** aplicação web intencionalmente vulnerável para treinamento em laboratório isolado. Não foi instalada nesta entrega.
+- **Python 3:** usado para executar o quiz e a simulação defensiva offline incluídos neste repositório.
 
-Execute o quiz:
+## Situação e método da atividade
+
+A prática proposta pela aula pode ser organizada em três etapas conceituais:
+
+### 1. Planejamento e autorização
+
+Antes de qualquer atividade técnica, o instrutor e o estudante devem definir por escrito o ambiente, o escopo, o período, os serviços permitidos e os critérios para interromper o exercício. Um endereço acessível não é, por si só, um alvo autorizado.
+
+### 2. Ambiente de laboratório
+
+Uma atividade operacional exigiria uma VM vulnerável de treinamento, como DVWA, e uma rede virtual isolada preparada pelo instrutor. Esta etapa **não foi realizada** nesta entrega, pois não há uma VM disponível. Não conecte uma aplicação vulnerável a redes públicas, domésticas ou corporativas.
+
+### 3. Análise e defesa
+
+Em vez de enviar tentativas de login a um sistema, este repositório fornece `simulacao_controle.py`. O programa gera eventos fictícios em memória e mostra como um limite defensivo pode bloquear novas falhas. Não testa senhas, não abre conexões e não usa Medusa.
+
+## Executar os materiais locais
+
+Requisito: Python 3; nenhuma dependência externa.
+
+Quiz de revisão:
 
 ```bash
 python3 quiz.py
 ```
 
-Execute a simulação defensiva offline:
+Simulação defensiva offline:
 
 ```bash
 python3 simulacao_controle.py
 ```
 
-A simulação usa valores fictícios em memória. Por padrão, mostra falhas simuladas até o limite de três e, em seguida, eventos bloqueados. Ela não recebe nem verifica senhas. Para executar os testes:
+Testes automáticos:
 
 ```bash
 python3 -m unittest discover -s tests -v
 ```
 
-## Como funciona a simulação
-
-A função `simulate_lockout()` recebe apenas uma quantidade de eventos e um limite numérico. Ela registra falhas fictícias e indica quando o controle bloquearia novas tentativas. Não há usuário/senha, formulário, endereço de rede, chamada HTTP ou integração com Medusa. O propósito é visualizar uma medida defensiva e discutir seus limites: bloqueios precisam ser configurados para reduzir abuso sem impedir indevidamente o acesso de usuários legítimos.
-
 ## Estrutura do repositório
 
-- `quiz.py` — quiz conceitual sobre segurança e defesa.
-- `simulacao_controle.py` — simulação local de limite/bloqueio, sem teste de senha.
-- `config/laboratorio.json` — declaração do escopo didático fictício e offline.
-- `docs/guia-de-estudos.md` — conceitos, ferramentas em alto nível, proteção de contas e segurança de laboratório.
-- `docs/glossario.md` — glossário da lição.
-- `docs/casos-para-discussao.md` — cenários fictícios para análise defensiva.
-- `docs/modelo-de-relatorio.md` — roteiro para documentar atividade autorizada.
-- `tests/` — testes automáticos do quiz e da simulação.
-- `.github/workflows/test.yml` — execução automática dos testes no GitHub Actions.
-- `images/` — pasta opcional para capturas reais e sanitizadas; não contém imagens inventadas.
+```text
+.
+├── .github/workflows/test.yml    # testes automáticos no GitHub Actions
+├── config/laboratorio.json       # escopo fictício da simulação offline
+├── docs/                         # guia, glossário, casos e modelo de relatório
+├── images/                       # pasta reservada a capturas reais e sanitizadas
+├── tests/                        # testes automatizados
+├── quiz.py                       # quiz conceitual
+├── simulacao_controle.py         # simulação local de defesa
+└── README.md                     # documentação da entrega
+```
 
-## Conceitos importantes
+Não há wordlist de senhas no repositório. Ela não é necessária para a simulação e poderia expor ou facilitar o uso indevido de credenciais. Também não há capturas de ferramentas: nenhuma execução prática foi feita.
 
-**Força bruta** é a tentativa repetida de combinações contra um mecanismo de autenticação. **Password spraying** usa uma ou poucas senhas comuns contra várias contas. **Credential stuffing** reutiliza pares de credenciais expostos em outros serviços. São riscos diferentes, mas medidas como MFA, senhas únicas, limitação cuidadosa de tentativas, alertas e resposta a incidentes ajudam a reduzir impactos.
+## Medidas de mitigação e defesa
 
-Medusa é uma ferramenta mencionada em cursos de auditoria de autenticação. Seu uso operacional pode afetar contas e serviços; por isso, este repositório não fornece comandos de ataque, listas de senhas ou instruções para executá-la. Em qualquer exercício prático, siga o material do instrutor, use apenas sistemas explicitamente autorizados e mantenha o laboratório isolado.
+- **Senhas únicas e longas:** reduzem o impacto da reutilização de credenciais; um gerenciador pode ajudar.
+- **MFA:** adiciona uma etapa de verificação além da senha. Métodos resistentes a phishing são preferíveis quando disponíveis.
+- **Limitação de tentativas:** pode reduzir abuso, mas deve ser configurada com cuidado para não bloquear usuários legítimos.
+- **Monitoramento:** alertas sobre padrões incomuns e revisão responsável dos registros ajudam a detectar incidentes.
+- **Proteção contra phishing:** treinamento e canais oficiais de recuperação reduzem risco de roubo de credenciais.
+- **Armazenamento seguro:** aplicações não devem guardar senhas em texto simples; devem usar algoritmos próprios para hashing de senhas e salt individual.
+- **Isolamento do laboratório:** máquinas vulneráveis devem ficar em rede virtual isolada, com dados fictícios e snapshot para restauração.
 
-## Proteções que podem ser discutidas
+## Evidências e capturas de tela
 
-- MFA, preferindo métodos resistentes a phishing quando disponíveis.
-- Senhas longas, únicas e armazenadas em um gerenciador confiável.
-- Armazenamento de senhas com algoritmo apropriado de hashing e salt individual.
-- Alertas para padrões incomuns e revisão de logs com respeito à privacidade.
-- Limites de tentativas configurados com cuidado e recuperação segura de conta.
-- Treinamento contra phishing e proteção da conta telefônica quando SMS é usado.
+A pasta `images/` contém instruções para adicionar capturas reais caso a prática seja realizada posteriormente em ambiente autorizado. Não use imagens fabricadas como evidência. Antes de enviar uma captura, remova senhas, tokens, dados pessoais e informações de rede que não devam ser públicas.
 
-## Escopo e segurança
+## Recursos de estudo
 
-A configuração em `config/laboratorio.json` declara que o exercício é offline, sem alvo, credenciais reais ou wordlist. Não foram incluídos arquivos de senhas: uma lista pode ser reutilizada para tentar autenticar em sistemas, e não é necessária para esta demonstração segura.
+- [Kali Linux — site oficial](https://www.kali.org/)
+- [DVWA — projeto oficial](https://github.com/digininja/DVWA)
+- [Medusa — projeto/documentação](https://github.com/jmk-foofus/medusa)
+- [Nmap — manual oficial](https://nmap.org/book/man.html)
+- [GitHub Quickstart](https://docs.github.com/en/get-started/start-your-journey/hello-world)
+- [GitHub Docs](https://docs.github.com/en/get-started/writing-on-github)
+- [GitHub Flavored Markdown](https://github.github.com/gfm/)
 
-Não teste contas, formulários, redes, endereços IP ou serviços de terceiros. Não publique credenciais, tokens, dados pessoais ou informações do laboratório. Se o curso exigir uma prática com ferramenta real, peça ao instrutor o ambiente, autorização e limites por escrito; não adapte esta simulação para outro alvo.
+## Autor e reflexão
 
-## Capturas de tela opcionais
+**Autor:** Daniel Junior (conforme informado para esta atividade).
 
-A pasta `images/` contém instruções. Se quiser incluir evidência, capture a execução local do quiz ou da simulação, revise a imagem para remover informações pessoais e salve-a nessa pasta. Não use capturas fabricadas nem mostre credenciais.
+Complete esta parte com sua própria reflexão: o que você aprendeu sobre força bruta e defesa? Por que autorização e isolamento são necessários? O que ainda gostaria de praticar quando houver um laboratório disponível?
 
-## Entrega
+## Descrição breve para entregar
 
-**Link do repositório:** https://github.com/danielmay2016dj-sketch/projeto-ciberseguranca-etica
+Projeto de estudo sobre segurança de autenticação com quiz e simulação offline de bloqueio defensivo. Inclui documentação sobre Kali Linux, Nmap, Medusa, DVWA e medidas de mitigação. A prática com VM e ferramentas de rede não foi executada porque não havia máquina virtual disponível.
 
-**Descrição breve para o campo de entrega:** Projeto educativo sobre segurança de autenticação, com quiz e simulação offline de bloqueio defensivo. Inclui guia de estudos, configuração fictícia de laboratório e testes automatizados; não testa senhas nem acessa serviços reais.
+## Aviso de uso
+
+Material educacional. Não use ferramentas para testar contas, redes, formulários ou serviços sem autorização explícita e escopo escrito. Esta entrega não realiza ataques nem valida credenciais.
 
 ## Licença
 
-O código é distribuído sob a licença MIT. Consulte `LICENSE`.
-
-## Recursos oficiais indicados na atividade
-
-- [Kali Linux — site oficial](https://www.kali.org/)
-- [DVWA — repositório oficial do projeto](https://github.com/digininja/DVWA)
-- [Medusa — repositório/documentação do projeto](https://github.com/jmk-foofus/medusa)
-- [Nmap — manual oficial](https://nmap.org/book/man.html)
-- [GitHub Quickstart — Hello World](https://docs.github.com/en/get-started/start-your-journey/hello-world)
-- [GitHub Docs — escrita e formatação no GitHub](https://docs.github.com/en/get-started/writing-on-github)
-- [GitHub Flavored Markdown — especificação](https://github.github.com/gfm/)
-
-Use a documentação oficial para leitura e contexto. As referências a ferramentas não significam autorização para executar testes em sistemas reais. Para qualquer prática operacional, siga as instruções e o ambiente definido pelo instrutor.
+O código está sob a licença MIT. Consulte `LICENSE`.
