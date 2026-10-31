@@ -102,6 +102,10 @@ A imagem mostra apenas a simulação offline; não é captura de Nmap ou Medusa.
 
 Complete esta parte com sua própria reflexão: o que você aprendeu sobre força bruta e defesa? Por que autorização e isolamento são necessários? O que ainda gostaria de praticar quando houver um laboratório disponível?
 
+## Declaração de uso de inteligência artificial
+
+Por questão de produtividade e pela falta de recursos para disponibilizar uma máquina virtual própria, utilizei uma ferramenta de inteligência artificial como apoio na organização do repositório, na elaboração da documentação e na criação/revisão da simulação defensiva offline e de seus testes. A IA foi usada como ferramenta de apoio; o material deve ser revisado pelo estudante e seguir as regras da disciplina. Como não havia VM disponível, a prática com Kali Linux, Nmap, Medusa e DVWA não foi executada.
+
 ## Descrição breve para entregar
 
 Projeto de estudo sobre segurança de autenticação com simulação offline de um controle defensivo. Inclui documentação sobre Kali Linux, Nmap, Medusa, DVWA e medidas de mitigação. A prática com VM e ferramentas de rede não foi executada porque não havia máquina virtual disponível.
