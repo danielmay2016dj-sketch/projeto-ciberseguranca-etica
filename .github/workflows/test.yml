@@ -15,6 +15,6 @@ jobs:
         with:
           python-version: '3.x'
       - name: Verificar sintaxe
-        run: python -m py_compile quiz.py
+        run: python -m py_compile simulacao_controle.py
       - name: Executar testes
         run: python -m unittest discover -s tests -v

@@ -1,6 +1,6 @@
 # Guia de estudos: fundamentos de cibersegurança
 
-Este guia acompanha o quiz e resume os principais conceitos da lição. Use-o para revisar antes de responder às perguntas e para organizar uma prática autorizada.
+Este guia resume os principais conceitos da lição e ajuda a organizar uma prática autorizada. O repositório contém material de estudo e uma simulação defensiva.
 
 ## 1. Objetivos de aprendizagem
 

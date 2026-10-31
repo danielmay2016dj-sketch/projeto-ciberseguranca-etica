@@ -1,3 +1,3 @@
-# Registro das capturas
+# Registro da captura
 
-As imagens `quiz-executado.png` e `simulacao-offline.png` foram geradas a partir da saída capturada ao executar os programas deste repositório no ambiente local de desenvolvimento. Elas registram somente o quiz e a simulação didática offline. Não mostram nem afirmam uma execução de Nmap, Medusa, DVWA ou ataque a credenciais.
+A imagem `simulacao-offline.png` foi gerada a partir da saída capturada ao executar o programa local `simulacao_controle.py`. Ela registra somente a simulação didática offline. Não mostra nem afirma execução de Nmap, Medusa, DVWA ou ataque a credenciais.

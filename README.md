@@ -2,7 +2,7 @@
 
 Este repositório reúne material de estudo sobre reconhecimento de rede, segurança de autenticação e defesa contra tentativas repetidas de login. Foi preparado como apoio a uma atividade prática de Segurança da Informação.
 
-> **Situação desta entrega:** não foi possível executar a parte prática porque não há uma máquina virtual disponível. Portanto, não há resultados reais de Nmap ou Medusa nem capturas de execução. O repositório inclui uma simulação defensiva offline e documentação para organizar o estudo. Não declare como realizado o que não foi executado.
+> **Situação desta entrega:** não foi possível executar a parte prática porque não há uma máquina virtual disponível. Portanto, não há resultados reais de Nmap ou Medusa nem capturas de execução. O repositório inclui uma simulação defensiva offline e documentação de apoio ao estudo. Não declare como realizado o que não foi executado.
 
 ## Objetivos
 
@@ -18,7 +18,7 @@ Este repositório reúne material de estudo sobre reconhecimento de rede, segura
 - **[Nmap](https://nmap.org/):** ferramenta de descoberta e auditoria de redes. Não foi executada nesta entrega.
 - **[Medusa](https://github.com/jmk-foofus/medusa):** ferramenta de auditoria de autenticação para ambientes controlados. Não foi executada nesta entrega.
 - **[DVWA](https://github.com/digininja/DVWA):** aplicação web intencionalmente vulnerável para treinamento em laboratório isolado. Não foi instalada nesta entrega.
-- **Python 3:** usado para executar o quiz e a simulação defensiva offline incluídos neste repositório.
+- **Python 3:** usado para executar a simulação defensiva offline incluída neste repositório.
 
 ## Situação e método da atividade
 
@@ -39,12 +39,6 @@ Em vez de enviar tentativas de login a um sistema, este repositório fornece `si
 ## Executar os materiais locais
 
 Requisito: Python 3; nenhuma dependência externa.
-
-Quiz de revisão:
-
-```bash
-python3 quiz.py
-```
 
 Simulação defensiva offline:
 
@@ -67,7 +61,6 @@ python3 -m unittest discover -s tests -v
 ├── docs/                         # guia, glossário, casos e modelo de relatório
 ├── images/                       # pasta reservada a capturas reais e sanitizadas
 ├── tests/                        # testes automatizados
-├── quiz.py                       # quiz conceitual
 ├── simulacao_controle.py         # simulação local de defesa
 └── README.md                     # documentação da entrega
 ```
@@ -86,13 +79,12 @@ Não há wordlist de senhas no repositório. Ela não é necessária para a simu
 
 ## Evidências e capturas de tela
 
-A pasta `images/` contém registros visuais gerados a partir da saída real dos dois programas locais:
+A pasta `images/` contém o registro visual da saída real da simulação local:
 
-- [Quiz executado](images/quiz-executado.png)
 - [Simulação defensiva offline](images/simulacao-offline.png)
-- [Nota sobre as capturas](images/REGISTRO.md)
+- [Nota sobre a captura](images/REGISTRO.md)
 
-Essas imagens mostram apenas o quiz e a simulação offline; não são capturas de Nmap ou Medusa. Se a prática for realizada posteriormente em ambiente autorizado, novas capturas reais podem ser adicionadas. Antes de enviar imagens, remova senhas, tokens, dados pessoais e informações de rede que não devam ser públicas.
+A imagem mostra apenas a simulação offline; não é captura de Nmap ou Medusa. Se a prática for realizada posteriormente em ambiente autorizado, novas capturas reais podem ser adicionadas. Antes de enviar imagens, remova senhas, tokens, dados pessoais e informações de rede que não devam ser públicas.
 
 ## Recursos de estudo
 
@@ -112,7 +104,7 @@ Complete esta parte com sua própria reflexão: o que você aprendeu sobre forç
 
 ## Descrição breve para entregar
 
-Projeto de estudo sobre segurança de autenticação com quiz e simulação offline de bloqueio defensivo. Inclui documentação sobre Kali Linux, Nmap, Medusa, DVWA e medidas de mitigação. A prática com VM e ferramentas de rede não foi executada porque não havia máquina virtual disponível.
+Projeto de estudo sobre segurança de autenticação com simulação offline de um controle defensivo. Inclui documentação sobre Kali Linux, Nmap, Medusa, DVWA e medidas de mitigação. A prática com VM e ferramentas de rede não foi executada porque não havia máquina virtual disponível.
 
 ## Aviso de uso
 
